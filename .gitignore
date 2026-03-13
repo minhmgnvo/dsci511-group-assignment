@@ -17,6 +17,7 @@ perf.data*
 
 # python outputs and caches
 .ipynb_checkpoints/
+__marimo__/
 .pytest_cache/
 .ruff_cache/
 /.quarto/
