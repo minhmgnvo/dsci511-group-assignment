@@ -1,18 +1,5 @@
 # Research Project Starter Repository
 
-This repository is a starting point for Michael's usual layout for data
-experiments.
-
-## Using the Template
-
-You can drop these files into a new project to start with a reasonable starting
-point for a data analytics project, especially using Python.
-
-The most important files to edit are this file, to add instructions and
-description of your particular project, and `pyproject.toml` to add your
-software dependencies.  You may also want to use Pixi to manage dependencies
-instead of `uv`.
-
 ## Software Setup
 
 This template is designed to work with the following tools:
