@@ -787,6 +787,7 @@ name = "my-experiment"
 version = "2025.0"
 source = { editable = "." }
 dependencies = [
+    { name = "ipykernel" },
     { name = "numpy" },
 ]
 
@@ -802,7 +803,10 @@ dev = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "numpy", specifier = ">=2.4.4" }]
+requires-dist = [
+    { name = "ipykernel", specifier = ">=7.2.0" },
+    { name = "numpy", specifier = ">=2.4.4" },
+]
 
 [package.metadata.requires-dev]
 dev = [
