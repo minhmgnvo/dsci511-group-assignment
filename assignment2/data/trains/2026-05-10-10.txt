@@ -7,3 +7,19 @@
 2026-05-10 10:43:00, Wawa,  2 LATE
 2026-05-10 10:55:00, Airport,  2 LATE
 2026-05-10 10:57:00, Jefferson,  1 LATE
+<<<<<<< Updated upstream
+=======
+2026-05-10 10:42:00, Doylestown, ON TIME
+2026-05-10 10:42:00, Doylestown, ON TIME
+2026-05-10 10:43:00, Wawa, ON TIME
+2026-05-10 10:43:00, Wawa, ON TIME
+2026-05-10 10:55:00, Airport, ON TIME
+2026-05-10 10:57:00, Temple U,  2 LATE
+>>>>>>> Stashed changes
+2026-05-10 10:55:00, Airport, 13 LATE
+2026-05-10 10:55:00, Airport, 13 LATE
+2026-05-10 10:57:00, Temple U, 10 LATE
+2026-05-10 10:57:00, Temple U, 10 LATE
+2026-05-10 10:55:00, Airport, 13 LATE
+2026-05-10 10:57:00, Temple U, 11 LATE
+2026-05-10 10:57:00, Temple U, 10 LATE
