@@ -1,62 +1,27 @@
-# Research Project Starter Repository
+# F1 Data Collection Pipeline
 
-## Software Setup
+A data collection project for Formula 1 telemetry and performance data, built for **DSCI-511**.
 
-This template is designed to work with the following tools:
+## Overview
 
--   Visual Studio Code for editing.  Other editors work fine too, but it
-    provides settings files to get started quickly with VSCode.
--   [`uv`][uv] for managing Python environments and dependencies.  Run `uv sync`
-    to set up an environment with the project dependencies.  You can install UV
-    itself from the web site, Homebrew (`brew install uv`), or in Windows using
-    WinGet (`winget install astral-sh.uv`).
--   `pre-commit` for enforcing source code formatting and standards.
-    `pre-commit` is included in the development dependencies, so it will be
-    installed in your virtual environment when you run `uv sync`; you can also
-    install it on your system to be able to run the pre-commit hooks without the
-    software environment.
+Formula 1 is one of the most data-intensive sports in the world — a single car generates millions of data points per lap. This project aggregates F1 data from multiple public sources using REST APIs and web scraping to build a unified dataset for analysis.
 
-[uv]: https://astral.sh/uv/
+## Data Sources
 
-### Installation
+### 1. OpenF1 API
+- **URL:** https://openf1.org
+- Free, open REST API — no authentication required
+- Provides real-time and historical F1 telemetry (speed, throttle, brake pressure, tire data, etc.)
 
-1.  Install `uv` and, optionally, `pre-commit`.
-    -   Mac: `brew install uv pre-commit`
-    -   Windows: `winget install astral-sh.uv`
-    -   Linux: `curl -LsSf https://astral.sh/uv/install.sh | sh`
+### 2. Web Scraping
+- **Sources:** Wikipedia race result tables, https://www.statsf1.com
+- Collects circuit metadata, race entry lists, and constructor/chassis info per season
 
-2.  Install project dependencies with `uv sync`.  This will create a virtual
-    environment in `.venv`, which you can activate in your shell:
+## Collection Methods
 
-    ```console
-    $ uv sync
-    $ . ./.venv/bin/activate
-    ```
+| Method        | Source            | Tool/Library         |
+|---------------|-------------------|----------------------|
+| REST API      | openf1.org        | `requests`           |
+| Web Scraping  | Wikipedia, statsf1| `BeautifulSoup`      |
 
-3.  Set up `pre-commit`:
-    ```console
-    $ pre-commit install
-    ```
 
-## Directory Layout
-
-My usual layout is like this:
-
--   `data/`: contains the project's *input* data, usually tracked with DVC.
-
--   `src/`: contains the source code specific to this project.  There is usually
-    a Python package in this directory, e.g. `myproject`, to house the code and
-    make it easier to input.
-
-    Sometimes the scripts live under `src`, either in the project package or in
-    a separate `scripts` directory; other times, however, they live in the
-    directories in which they do their work.  Whatever is clearest for a
-    particular project.
-
-    With the package in `src/`, and automatically set up into the virtual
-    environment with `uv sync`, its contents can be imported by scripts and
-    notebooks throughout the project repository.
-
--   Other directories to contain different classes of outputs.  Sometimes this
-    is organized by data set; for a project with a single data set, it is often
-    organized by stage, such as `models/` and `recommendations/`.
